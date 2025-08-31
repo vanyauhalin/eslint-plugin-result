@@ -33,11 +33,17 @@ jobs:
     - name: Build package.json
       run: pnpm build-package-json
 
+    - name: Archive package
+      run: pnpm pack --out package.tgz
+
     - name: Archive compat
       run: tar --create --gzip --directory e2e --file compat.tgz compat
 
-    - name: Archive package
-      run: pnpm pack --out package.tgz
+    - name: Extract package
+      run: tar --extract --directory e2e/integration --file package.tgz
+
+    - name: Archive integration
+      run: tar --create --gzip --directory e2e --file integration.tgz integration
 
     - name: Upload compat
       uses: actions/upload-artifact@v4
@@ -46,11 +52,11 @@ jobs:
         path: compat.tgz
         if-no-files-found: error
 
-    - name: Upload package
+    - name: Upload integration
       uses: actions/upload-artifact@v4
       with:
-        name: package
-        path: package.tgz
+        name: integration
+        path: integration.tgz
         if-no-files-found: error
 
   validate:
@@ -79,25 +85,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
     - name: Download compat
       uses: actions/download-artifact@v4
       with:
         name: compat
 
-    - name: Navigate to e2e
-      run: cd e2e
-
-    - name: Cleanup compat
-      run: rm -rf compat
-
     - name: Extract compat
-      run: tar --extract --file ../compat.tgz
-
-    - name: Navigate to compat
-      run: cd compat
+      run: tar --extract --file *.tgz --strip-components 1
 
     - name: Setup mise
       uses: jdx/mise-action@v2
@@ -112,19 +106,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Download package
+    - name: Download integration
       uses: actions/download-artifact@v4
       with:
-        name: package
+        name: integration
 
-    - name: Navigate to integration
-      run: cd e2e/integration
-
-    - name: Extract package
-      run: tar --extract --file ../../*.tgz
+    - name: Extract integration
+      run: tar --extract --file *.tgz --strip-components 1
 
     - name: Setup mise
       uses: jdx/mise-action@v2
