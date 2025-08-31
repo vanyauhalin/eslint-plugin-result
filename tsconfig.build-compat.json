@@ -1,0 +1,9 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"noEmit": false,
+		"outDir": "e2e/compat"
+	},
+	"include": ["lib", "scripts"],
+	"exclude": ["lib/data/plugin.test.ts"]
+}

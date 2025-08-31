@@ -1,0 +1,69 @@
+{
+	"name": "@vanyauhalin/eslint-plugin-result",
+	"version": "0.0.0",
+	"description": "Rules for consistent @vanyauhalin/result usage",
+	"keywords": [
+		"error-handling",
+		"eslint",
+		"eslint-plugin",
+		"go-style",
+		"result",
+		"try-catch",
+		"type-safe"
+	],
+	"homepage": "https://github.com/vanyauhalin/eslint-plugin-result",
+	"bugs": {
+		"url": "https://github.com/vanyauhalin/eslint-plugin-result/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vanyauhalin/eslint-plugin-result.git"
+	},
+	"license": "MIT",
+	"author": {
+		"name": "Ivan Uhalin",
+		"email": "hi@vanyauhalin.me",
+		"url": "https://vanyauhalin.me/"
+	},
+	"type": "module",
+	"main": "dist/main.js",
+	"types": "dist/main.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build-compat": "tsc --project tsconfig.build-compat.json",
+		"build-main": "tsc --project tsconfig.build-main.json --showConfig | node scripts/build-main.ts",
+		"build-package-json": "clear-package-json package.json --output package.json",
+		"build-types": "tsc --project tsconfig.build-types.json && api-extractor run && node scripts/patch-types.ts",
+		"check": "tsc",
+		"lint": "eslint --no-warn-ignored lib scripts *.*",
+		"test": "tsc --project tsconfig.test.json --showConfig | node scripts/test.ts"
+	},
+	"dependencies": {
+		"@typescript-eslint/scope-manager": "8.41.0",
+		"@typescript-eslint/utils": "8.41.0"
+	},
+	"devDependencies": {
+		"@microsoft/api-extractor": "7.52.11",
+		"@types/estree": "1.0.8",
+		"@types/node": "24.3.0",
+		"@typescript-eslint/parser": "8.41.0",
+		"@typescript-eslint/rule-tester": "8.41.0",
+		"@typescript-eslint/type-utils": "8.41.0",
+		"@vanyauhalin/eslint-config": "0.0.10",
+		"clean-publish": "5.2.2",
+		"esbuild": "0.25.9",
+		"eslint": "9.34.0",
+		"typescript": "5.9.2"
+	},
+	"peerDependencies": {
+		"@typescript-eslint/parser": ">=8.0.0",
+		"eslint": ">=9.0.0",
+		"typescript": ">=4.8.4"
+	},
+	"packageManager": "pnpm@10.15.0",
+	"engines": {
+		"node": ">=18.18.0"
+	}
+}

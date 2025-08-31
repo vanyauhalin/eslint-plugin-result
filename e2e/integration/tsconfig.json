@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
+		"noEmit": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "ESNext"
+	},
+	"include": ["lib", "test", "*.js"]
+}

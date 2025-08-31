@@ -1,0 +1,139 @@
+name: audit
+
+on:
+  pull_request:
+    branches:
+    - main
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup mise
+      uses: jdx/mise-action@v2
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Build main
+      run: pnpm build-main
+
+    - name: Build types
+      run: pnpm build-types
+
+    - name: Build compat
+      run: pnpm build-compat
+
+    - name: Build package.json
+      run: pnpm build-package-json
+
+    - name: Archive compat
+      run: tar --create --gzip --directory e2e --file compat.tgz compat
+
+    - name: Archive package
+      run: pnpm pack --out package.tgz
+
+    - name: Upload compat
+      uses: actions/upload-artifact@v4
+      with:
+        name: compat
+        path: compat.tgz
+        if-no-files-found: error
+
+    - name: Upload package
+      uses: actions/upload-artifact@v4
+      with:
+        name: package
+        path: package.tgz
+        if-no-files-found: error
+
+  validate:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup mise
+      uses: jdx/mise-action@v2
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+
+    - name: Check package
+      run: pnpm check
+
+    - name: Lint package
+      run: pnpm lint
+
+    - name: Test package
+      run: pnpm test
+
+  compat:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download compat
+      uses: actions/download-artifact@v4
+      with:
+        name: compat
+
+    - name: Navigate to e2e
+      run: cd e2e
+
+    - name: Cleanup compat
+      run: rm -rf compat
+
+    - name: Extract compat
+      run: tar --extract --file ../compat.tgz
+
+    - name: Navigate to compat
+      run: cd compat
+
+    - name: Setup mise
+      uses: jdx/mise-action@v2
+
+    - name: Install dependencies
+      run: pnpm install --no-lockfile
+
+    - name: Test package
+      run: pnpm test
+
+  integration:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Download package
+      uses: actions/download-artifact@v4
+      with:
+        name: package
+
+    - name: Navigate to integration
+      uses: cd e2e/integration
+
+    - name: Extract package
+      run: tar --extract --file ../../*.tgz
+
+    - name: Setup mise
+      uses: jdx/mise-action@v2
+
+    - name: Install dependencies
+      run: pnpm install --no-lockfile
+
+    - name: Check package
+      run: pnpm check
+
+    - name: Test package
+      run: pnpm test

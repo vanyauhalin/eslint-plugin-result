@@ -1,0 +1,9 @@
+dist
+e2e/*/pnpm-lock.yaml
+e2e/compat/lib
+e2e/compat/scripts
+e2e/integration/package
+e2e/integration/snapshots/actual.json
+node_modules
+tmp
+*.tgz

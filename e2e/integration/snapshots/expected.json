@@ -1,0 +1,48 @@
+[
+  {
+    "filePath": "eslint.config.js",
+    "messages": [],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "usedDeprecatedRules": []
+  },
+  {
+    "filePath": "lib/main.ts",
+    "messages": [
+      {
+        "ruleId": "result/no-arrow-function-argument",
+        "severity": 2,
+        "message": "Do not use an arrow function",
+        "line": 4,
+        "column": 17,
+        "nodeType": "ArrowFunctionExpression",
+        "messageId": "noArrowFunction",
+        "endLine": 4,
+        "endColumn": 30
+      },
+      {
+        "ruleId": "result/no-async-function-in-sync",
+        "severity": 2,
+        "message": "Use `safeAsync`",
+        "line": 4,
+        "column": 17,
+        "nodeType": "ArrowFunctionExpression",
+        "messageId": "useSafeAsync",
+        "endLine": 4,
+        "endColumn": 30
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 2,
+    "fatalErrorCount": 0,
+    "warningCount": 0,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "// @ts-ignore\nimport * as target from \"@vanyauhalin/result\"\n\ntarget.safeSync(async() => {})\n",
+    "usedDeprecatedRules": []
+  }
+]
