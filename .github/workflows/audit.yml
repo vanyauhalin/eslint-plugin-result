@@ -121,7 +121,7 @@ jobs:
         name: package
 
     - name: Navigate to integration
-      uses: cd e2e/integration
+      run: cd e2e/integration
 
     - name: Extract package
       run: tar --extract --file ../../*.tgz
