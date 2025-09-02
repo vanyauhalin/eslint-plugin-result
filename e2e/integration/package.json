@@ -3,7 +3,7 @@
 	"type": "module",
 	"scripts": {
 		"check": "tsc",
-		"test": "eslint --no-warn-ignored --format json lib *.* > snapshots/actual.json || true && node test/test.js"
+		"test": "eslint --no-warn-ignored --format json lib *.* > snapshots/actual.json || true && node scripts/test.js"
 	},
 	"devDependencies": {
 		"@types/node": "18.18.0",
