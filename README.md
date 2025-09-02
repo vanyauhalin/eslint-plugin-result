@@ -126,19 +126,19 @@ version is 8.
 [`--fix` CLI option]: https://eslint.org/docs/user-guide/command-line-interface#--fix
 [type information]: https://typescript-eslint.io/linting/typed-linting
 
-[`Result`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#result-1
-[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safeasyncfn-args
+[`Result`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#result-1
+[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safeasyncfn-args
 
-[no-arrow-function-argument]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/no-arrow-function-argument.md
-[no-async-function-in-sync]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/no-async-function-in-sync.md
-[no-bare-error-return]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/no-bare-error-return.md
-[no-function-argument]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/no-function-argument.md
-[no-iife-argument]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/no-iife-argument.md
-[no-newline-before-error-check]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/no-newline-before-error-check.md
-[no-result-destructuring]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/no-result-destructuring.md
-[prefer-safe-over-try-catch]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.0.0/docs/rules/prefer-safe-over-try-catch.md
+[no-arrow-function-argument]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/no-arrow-function-argument.md
+[no-async-function-in-sync]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/no-async-function-in-sync.md
+[no-bare-error-return]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/no-bare-error-return.md
+[no-function-argument]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/no-function-argument.md
+[no-iife-argument]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/no-iife-argument.md
+[no-newline-before-error-check]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/no-newline-before-error-check.md
+[no-result-destructuring]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/no-result-destructuring.md
+[prefer-safe-over-try-catch]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/docs/rules/prefer-safe-over-try-catch.md
 
-[MIT]: https://github.com/vanyauhalin/moondusttheme/blob/main/LICENSE
+[MIT]: https://github.com/vanyauhalin/eslint-plugin-result/blob/v0.1.0/LICENSE
 [Ivan Uhalin]: https://github.com/vanyauhalin/

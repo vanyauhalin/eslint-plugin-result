@@ -38,8 +38,8 @@ result.safeAsync(fn)
 
 [type information]: https://typescript-eslint.io/linting/typed-linting
 
-[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safeasyncfn-args
+[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safeasyncfn-args
 
 [Rule source]: ../../lib/rules/no-async-function-in-sync.ts
 [Test source]: ../../lib/rules/no-async-function-in-sync.test.ts

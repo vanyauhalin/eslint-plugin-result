@@ -37,9 +37,9 @@ result.safeAsync(fn)
 
 <!-- Definitions -->
 
-[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safeasyncfn-args
+[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safeasyncfn-args
 
 [Rule source]: ../../lib/rules/no-iife-argument.ts
 [Test source]: ../../lib/rules/no-iife-argument.test.ts

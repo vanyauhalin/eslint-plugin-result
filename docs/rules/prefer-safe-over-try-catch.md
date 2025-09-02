@@ -39,9 +39,9 @@ const c = await result.safeAsync(fetch, "")
 
 <!-- Definitions -->
 
-[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safeasyncfn-args
+[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safeasyncfn-args
 
 [Rule source]: ../../lib/rules/prefer-safe-over-try-catch.ts
 [Test source]: ../../lib/rules/prefer-safe-over-try-catch.test.ts

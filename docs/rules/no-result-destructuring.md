@@ -34,10 +34,10 @@ const c = await result.safeAsync(fetch, "")
 
 <!-- Definitions -->
 
-[`Result`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#result-1
-[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safeasyncfn-args
+[`Result`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#result-1
+[`safeNew`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safeasyncfn-args
 
 [Rule source]: ../../lib/rules/no-result-destructuring.ts
 [Test source]: ../../lib/rules/no-result-destructuring.test.ts

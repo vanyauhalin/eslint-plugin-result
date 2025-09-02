@@ -60,7 +60,7 @@ async function fn() {
 
 <!-- Definitions -->
 
-[`Result`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#result-1
+[`Result`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#result-1
 
 [Rule source]: ../../lib/rules/no-bare-error-return.ts
 [Test source]: ../../lib/rules/no-bare-error-return.test.ts

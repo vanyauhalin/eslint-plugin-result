@@ -35,8 +35,8 @@ result.safeAsync(fn)
 
 <!-- Definitions -->
 
-[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safesyncfn-args
-[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.0.0/README.md#safeasyncfn-args
+[`safeSync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safesyncfn-args
+[`safeAsync`]: https://github.com/vanyauhalin/result/blob/v0.1.0/README.md#safeasyncfn-args
 
 [Rule source]: ../../lib/rules/no-function-argument.ts
 [Test source]: ../../lib/rules/no-function-argument.test.ts
