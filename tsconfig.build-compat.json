@@ -4,6 +4,6 @@
 		"noEmit": false,
 		"outDir": "e2e/compat"
 	},
-	"include": ["lib", "scripts"],
+	"include": ["lib", "scripts/test.ts"],
 	"exclude": ["lib/data/plugin.test.ts"]
 }
