@@ -37,7 +37,7 @@
 		"build-package-json": "clear-package-json package.json --output package.json",
 		"build-types": "tsc --project tsconfig.build-types.json && api-extractor run && node scripts/patch-types.ts",
 		"check": "tsc",
-		"lint": "eslint --no-warn-ignored lib scripts *.*",
+		"lint": "eslint --no-warn-ignored data lib scripts *.*",
 		"test": "tsc --project tsconfig.test.json --showConfig | node scripts/test.ts"
 	},
 	"dependencies": {

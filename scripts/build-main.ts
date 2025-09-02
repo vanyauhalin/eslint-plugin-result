@@ -1,6 +1,6 @@
 import * as esbuild from "esbuild"
-import * as shared from "../lib/test/shared.ts"
-import * as tsconfig from "./tsconfig.ts"
+import pack from "../data/package.json.ts"
+import * as tsconfig from "../data/tsconfig.json.ts"
 
 async function main(): Promise<void> {
 	let c = await tsconfig.load(process)
@@ -8,12 +8,12 @@ async function main(): Promise<void> {
 		bundle: true,
 		entryPoints: [...c.files],
 		external: [
-			...Object.keys(shared.pack.dependencies),
-			...Object.keys(shared.pack.peerDependencies),
+			...Object.keys(pack.dependencies),
+			...Object.keys(pack.peerDependencies),
 		],
 		format: "esm",
 		logLevel: "error",
-		outfile: shared.pack.main,
+		outfile: pack.main,
 		platform: "node",
 		target: c.compilerOptions.target,
 		tsconfigRaw: c,

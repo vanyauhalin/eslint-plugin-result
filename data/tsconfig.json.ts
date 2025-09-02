@@ -1,16 +1,13 @@
-export type Config = {
-	compilerOptions: CompilerOptions
+export type TsconfigJson = {
+	compilerOptions: {
+		target: string
+	}
 	files: string[]
 }
 
-export type CompilerOptions = {
-	outFile: string
-	target: string
-}
-
-export async function load(p: NodeJS.Process): Promise<Config> {
-	let t = await read(p)
-	return JSON.parse(t)
+export async function load(p: NodeJS.Process): Promise<TsconfigJson> {
+	let s = await read(p)
+	return JSON.parse(s)
 }
 
 async function read(p: NodeJS.Process): Promise<string> {

@@ -1,7 +1,7 @@
 import path from "node:path"
 import test from "node:test"
 import * as ruleTester from "@typescript-eslint/rule-tester"
-import * as tsconfig from "./tsconfig.ts"
+import * as tsconfig from "../data/tsconfig.json.ts"
 
 const version = process.version.slice(1).split(".")
 const major = Number.parseInt(version[0], 10)
