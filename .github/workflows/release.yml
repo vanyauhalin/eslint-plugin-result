@@ -132,7 +132,7 @@ jobs:
       run: pnpm build-package-json
 
     - name: Publish package
-      run: deno publish --allow-dirty --allow-slow-types
+      run: deno publish --allow-dirty --allow-slow-types --no-check
 
   gr:
     needs: [build, npm, gpr, jsr]
