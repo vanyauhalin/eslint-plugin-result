@@ -1,10 +1,11 @@
 dist
-e2e/*/pnpm-lock.yaml
-e2e/compat/data
-e2e/compat/lib
-e2e/compat/scripts
-e2e/integration/package
-e2e/integration/snapshots/actual.json
+test/compat/data
+test/compat/lib
+test/compat/scripts
+test/compat/pnpm-lock.yaml
+test/integration/package
+test/integration/snapshots/actual.json
+test/integration/pnpm-lock.yaml
 node_modules
 tmp
 *.tgz

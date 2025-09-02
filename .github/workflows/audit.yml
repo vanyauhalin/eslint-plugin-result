@@ -37,13 +37,13 @@ jobs:
       run: pnpm pack --out package.tgz
 
     - name: Archive compat
-      run: tar --create --gzip --directory e2e --file compat.tgz compat
+      run: tar --create --gzip --directory test --file compat.tgz compat
 
     - name: Extract package
-      run: tar --extract --directory e2e/integration --file package.tgz
+      run: tar --extract --directory test/integration --file package.tgz
 
     - name: Archive integration
-      run: tar --create --gzip --directory e2e --file integration.tgz integration
+      run: tar --create --gzip --directory test --file integration.tgz integration
 
     - name: Upload compat
       uses: actions/upload-artifact@v4
