@@ -15,12 +15,6 @@ export default [
 		},
 	},
 	{
-		files: ["lib/main.ts"],
-		rules: {
-			"import-x/no-default-export": "off",
-		},
-	},
-	{
 		files: ["scripts/*.ts"],
 		rules: {
 			"unicorn/prefer-top-level-await": "off",

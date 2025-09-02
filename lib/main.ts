@@ -88,4 +88,6 @@ const def: Definition = {
 	},
 }
 
+// ESLint plugins conventionally use default exports.
+// eslint-disable-next-line import-x/no-default-export
 export default def
