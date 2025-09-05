@@ -38,6 +38,7 @@
 		"build-types": "tsc --project tsconfig.build-types.json && api-extractor run && node scripts/patch-types.ts",
 		"check": "tsc",
 		"lint": "eslint --no-warn-ignored data lib scripts *.*",
+		"patch-jsr": "node scripts/patch-jsr.ts",
 		"test": "tsc --project tsconfig.test.json --showConfig | node scripts/test.ts"
 	},
 	"dependencies": {
